@@ -3,6 +3,7 @@ name = "patina-apps"
 version = "0.1.0"
 edition = "2024"
 license = "BSD-3-Clause"
+repository = "https://github.com/Sector-F-Labs/patina-apps"
 description = "Folder apps, as on a Mac: reading Name.app/app.toml (format 1), running them and drawing their icons"
 
 [features]

@@ -2,7 +2,7 @@
 
 Folder apps, as on a Mac. An app is a folder, `Name.app`, with an `app.toml` saying how to run
 it; copy one into `~/Apps` to install it, delete it to uninstall. The format and its rules are
-Patina OS's ADR-0004 (format 1); why apps are folders is ADR-0002 and ADR-0005.
+Patina OS's ADR-0004 (format 1); why apps are folders is its ADR-0002 and ADR-0005.
 
 ```toml
 format = 1
@@ -31,13 +31,11 @@ The `icon` feature adds `icon::render`, which draws an SVG or PNG icon to RGBA a
 
 ## Use
 
-It isn't on crates.io; depend on it by git:
+It isn't on crates.io; depend on it from GitHub:
 
 ```toml
-patina-apps = { git = "ssh://divan@remotes.divanv.com/~/Remotes/src/com/sectorflabs/patina-apps", features = ["icon"] }
+patina-apps = { git = "https://github.com/Sector-F-Labs/patina-apps", features = ["icon"] }
 ```
-
-with `net.git-fetch-with-cli = true` in `.cargo/config.toml`, so cargo uses your ssh setup.
 
 ## Develop
 
