@@ -1,0 +1,17 @@
+[package]
+name = "patina-apps"
+version = "0.1.0"
+edition = "2024"
+license = "BSD-3-Clause"
+description = "Folder apps, as on a Mac: reading Name.app/app.toml (format 1), running them and drawing their icons"
+
+[features]
+default = []
+# Drawing icons (SVG and PNG) to RGBA, for apps that show them.
+icon = ["dep:resvg", "dep:image"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+toml = "1"
+image = { version = "0.25", default-features = false, features = ["png"], optional = true }
+resvg = { version = "0.48.1", default-features = false, optional = true }
